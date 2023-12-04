@@ -6,6 +6,7 @@ var logger = require("morgan");
 const expressSession = require("express-session");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const passport = require("passport");
 
 var app = express();
 
@@ -16,9 +17,13 @@ app.use(
   expressSession({
     resave: false,
     saveUninitialized: false,
-    secret: "project2",
+    secret: "project",
   })
 );
+app.use(passport.initialize());
+app.use(passport.session());
+passport.serializeUser(usersRouter.serializeUser()) ;
+passport.deserializeUser(usersRouter.deserializeUser()) ;
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

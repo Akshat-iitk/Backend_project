@@ -1,9 +1,33 @@
-var express = require('express');
-var router = express.Router();
-
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+const mongoose = require("mongoose") ;
+const plm = require("passport-local-mongoose");
+const userSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  posts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Post',
+    },
+  ],
+  dp: {
+    type: String, // Assuming the profile picture is stored as a URL
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  fullName: {
+    type: String,
+    required: true,
+  },
 });
-
-module.exports = router;
+userSchema.plugin(plm) ;
+module.exports = mongoose.model("users",userSchema) ;
