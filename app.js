@@ -16,7 +16,7 @@ app.use(
   expressSession({
     resave: false,
     saveUninitialized: false,
-    secret: "project",
+    secret: "project2",
   })
 );
 app.use(logger("dev"));
