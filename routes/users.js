@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
   },
   posts: [
     {
@@ -24,7 +23,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  fullName: {
+  fullname: {
     type: String,
     required: true,
   },
