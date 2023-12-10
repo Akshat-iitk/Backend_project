@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login page</title>
-   <link rel="stylesheet" href="/stylesheets/style_login.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <!--pinterest logo-->
-        <img
-          src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png"
-          alt="pin logo"
-          class="img1"
-        />
-        <p class="header">Login to see more</p>
-        <% if(error.length > 0) { %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="stylesheets/style_login.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300 flex items-center justify-center h-screen">
 
-                  <p class="error"><%= error %></p>
-          <% }%>
-        <form action="/login" method="post">
-          <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            class="detail"
-          /><br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            class="detail"
-          />
-          <input class="btn int" type="submit" value="login my account">
-          <a href="/forgot">Forgot your password?</a>
-        </form>
-
-
-
-        <footer>
-          <p>
-            By continuing, you agree to Pinterest's
-            <b>Terms of Service, Privacy policy.</b>
-          </p>
-          <hr />
-          <p class="already-on-pinterest" ><h3>New on pinterest </h3>  <a href="/" class="login-button">Register</a> </p>
-        </footer>
-      </div>
+  <div class="bg-gray-300 p-8 rounded-lg shadow-md w-96 text-center overall">
+    <!-- Welcome Message -->
+    <!-- Logo -->
+    <div class="logo mb-6">
+      <img src="/logo/logo.png" alt="CaptionCraze Logo" class="mx-auto">
     </div>
-  </body>
+
+    <!-- Website Name -->
+    <h1 class="text-3xl font-semibold text-blue-500 mb-4" id="captionCraze">Caption<span class="text-gray-600">Craze</span></h1>
+
+    <!-- Error Handling -->
+    <% if(error.length > 0) { %>
+      <p class="text-red-500 mb-4"><%= error %></p>
+      <script>
+        // JavaScript code to dynamically add a class to the login button
+        document.addEventListener('DOMContentLoaded', function() {
+          const loginButton = document.getElementById('loginbutton');
+          if (loginButton) {
+            loginButton.classList.add('error'); // Add your custom error class
+          }
+        });
+      </script>
+    <% } %>
+
+    <!-- Login Form -->
+    <form action="/login" method="post" class="space-y-4">
+      <div>
+        <input type="text" name = "username" id="username"  placeholder="Username" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      <!-- Add more fields for password, etc. -->
+      <div>
+        <input type="password" name = "password" onblur="checkShowPassword()" placeholder="Password" id="password"  class="mt-1 p-2 w-full border rounded-md">
+        <div class="show-password-container mt-2">
+          <label for="showPassword" class="text-sm text-gray-600 show-password-label">Show Password</label>
+          <input id="show_Password" type="checkbox" onclick="showPassword()" class="show-password-checkbox cursor-pointer">
+        </div>
+      </div>
+      <div>
+        <button onclick="removecheck()" type="submit" id="loginbutton" class="w-full bg-blue-500 text-white p-2 rounded-md">Log In</button>
+      </div>
+    </form>
+    <div class="mt-4 text-center">
+      <p class="text-gray-600">Don't have an account? <a href="/register" class="text-blue-500 button">Register here</a></p>
+    </div>
+  </div>
+<script src="javascripts/script_login.js"></script>
+</body>
 </html>

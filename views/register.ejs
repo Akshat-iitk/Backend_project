@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="stylesheets/style_register.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300 flex items-center justify-center h-screen">
+  <div class=" text-4xl font-bold text-black-500 bg-gray-500 mb-8 ml-2 out_div">
+    Welcome to <span class="text-blue-600 inline-block">Caption</span><span class="text-black-600 " id="typingText"></span>
+  </div>
+  <div class="bg-gray-300 p-8 rounded-lg shadow-md w-96 text-center overall ml-8">
+    
+    <div class="logo">
+      <img src="/logo/logo.png" alt="CaptionCraze Logo" class="mx-auto ">
+    </div>
+
+    
+    <h1 class="text-3xl font-semibold text-blue-500 " id="captionCraze">Caption<span class="text-gray-600">Craze</span></h1>
+
+
+    
+    <form action="/login" method="post" class="space-y-2">
+      <div>
+        <input type="text" name = "username" id="username"  placeholder="Username" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      <div>
+        <input type="text" name = "fullname" id="fullname"  placeholder="Fullname" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      <div>
+        <input type="email" name = "email" id="email"  placeholder="Email" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      
+      <div>
+        <input type="password" name = "password" onblur="checkShowPassword()" placeholder="Password" id="password"  class="mt-1 p-2 w-full border rounded-md">
+        <div class="flex items-center mt-2">
+          <div id="password-strength-meter" class="h-2 w-full bg-gray-300 rounded-md overflow-hidden">
+            <div id="strength-bar" class="h-full transition-all"></div>
+          </div>
+          <span id="strength-text" class="ml-2 text-sm text-gray-600"></span>
+        </div>
+        <div class="show-password-container mt-2">
+          <label for="showPassword" class="text-sm text-gray-600 show-password-label">Show Password</label>
+          <input id="show_Password" type="checkbox" onclick="showPassword()" class="show-password-checkbox cursor-pointer">
+        </div>
+      </div>
+      <div>
+        <button onclick="removecheck()" type="submit" id="loginbutton" class="w-full bg-blue-500 text-white p-2 rounded-md">Sign up</button>
+      </div>
+    </form>
+    <div class="mt-4 text-center">
+      <p class="text-gray-600">Already have a account? <a href="/" class="text-blue-500 button">Login</a></p>
+    </div>
+  </div>  
+<script src="javascripts/script_register.js"></script>
+</body>
+</html>

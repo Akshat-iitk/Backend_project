@@ -7,11 +7,14 @@ body{
   box-sizing: border-box;
   font-family: "Gilroy";
 }
+.out_div{
+  width: 220px;
+}
 .logo img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   filter: drop-shadow(5px 2px 9px #0b0a0a);
   opacity: 0.1;
   transition: opacity 1.5s ease-in-out;
@@ -19,9 +22,8 @@ body{
 .logo img.show {
   opacity: 1; 
 }
-
 .logo img:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 button {
   background-color: #3490dc;

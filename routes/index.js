@@ -7,15 +7,15 @@ const localStrategy = require("passport-local");
 const passport = require("passport");
 passport.use(new localStrategy(userModel.authenticate()));
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index");
+router.get("/",function (req, res, next) {
+  res.render("login", { error: req.flash("error") });
 });
 router.get("/profile", isLoggedIn, async function (req, res, next) {
   let user = await userModel.findOne({ username: req.session.passport.user }).populate("posts");
   res.render("profile", { user });
 });
-router.get("/login", function (req, res, next) {
-  res.render("login", { error: req.flash("error") });
+router.get("/register", function (req, res, next) {
+  res.render("register",{ error: req.flash("error") });
 });
 router.get("/feed", isLoggedIn, function (req, res, next) {
   res.render("feed");
@@ -35,7 +35,7 @@ router.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/profile",
-    failureRedirect: "/login",
+    failureRedirect: "/",
     failureFlash: true,
   }),
   function (req, res) {}
@@ -73,6 +73,6 @@ function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect("/login");
+  res.redirect("/");
 }
 module.exports = router;
