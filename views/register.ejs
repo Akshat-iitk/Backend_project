@@ -11,18 +11,18 @@
   <div class=" text-4xl font-bold text-black-500 bg-gray-500 mb-8 ml-2 out_div">
     Welcome to <span class="text-blue-600 inline-block">Caption</span><span class="text-black-600 " id="typingText"></span>
   </div>
-  <div class="bg-gray-300 p-8 rounded-lg shadow-md w-96 text-center overall ml-8">
+  <div class="p-8 rounded-lg shadow-md w-96 text-center overall ml-8">
     
     <div class="logo">
       <img src="/logo/logo.png" alt="CaptionCraze Logo" class="mx-auto ">
     </div>
 
-    
+    <!-- Website Name -->
     <h1 class="text-3xl font-semibold text-blue-500 " id="captionCraze">Caption<span class="text-gray-600">Craze</span></h1>
 
 
-    
-    <form action="/login" method="post" class="space-y-2">
+    <!-- Login Form -->
+    <form action="/register" method="post" class="space-y-2">
       <div>
         <input type="text" name = "username" id="username"  placeholder="Username" class="mt-1 p-2 w-full border rounded-md">
       </div>
@@ -32,7 +32,7 @@
       <div>
         <input type="email" name = "email" id="email"  placeholder="Email" class="mt-1 p-2 w-full border rounded-md">
       </div>
-      
+      <!-- Add more fields for password, etc. -->
       <div>
         <input type="password" name = "password" onblur="checkShowPassword()" placeholder="Password" id="password"  class="mt-1 p-2 w-full border rounded-md">
         <div class="flex items-center mt-2">

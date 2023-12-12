@@ -6,6 +6,7 @@
   <title>login</title>
   <link rel="stylesheet" href="stylesheets/style_login.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body class="bg-gray-300 flex items-center justify-center h-screen">
 
@@ -40,10 +41,11 @@
       </div>
       <!-- Add more fields for password, etc. -->
       <div>
-        <input type="password" name = "password" onblur="checkShowPassword()" placeholder="Password" id="password"  class="mt-1 p-2 w-full border rounded-md">
-        <div class="show-password-container mt-2">
+        <input type="password" name = "password" placeholder="Password" id="password"  class="mt-1 p-2 w-full border rounded-md">
+        <div class="show-password-container mt-2 border">
           <label for="showPassword" class="text-sm text-gray-600 show-password-label">Show Password</label>
-          <input id="show_Password" type="checkbox" onclick="showPassword()" class="show-password-checkbox cursor-pointer">
+          <!-- <input id="show_Password" type="checkbox" onclick="showPassword()" class="show-password-checkbox cursor-pointer"> -->
+         <span class="ml-4 cursor-pointer"> <i id="eyespan" class="ri-eye-off-line"onclick="showPassword()"></i> </span>
         </div>
       </div>
       <div>

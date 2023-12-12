@@ -13,10 +13,10 @@ const userSchema = new mongoose.Schema({
   posts: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Post',
+      ref: 'post',
     },
   ],
-  dp: {
+  profileImage: {
     type: String, // Assuming the profile picture is stored as a URL
   },
   email: {

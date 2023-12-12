@@ -7,19 +7,47 @@ const localStrategy = require("passport-local");
 const passport = require("passport");
 passport.use(new localStrategy(userModel.authenticate()));
 /* GET home page. */
-router.get("/",function (req, res, next) {
+router.get("/", function (req, res, next) {
   res.render("login", { error: req.flash("error") });
 });
 router.get("/profile", isLoggedIn, async function (req, res, next) {
   let user = await userModel.findOne({ username: req.session.passport.user }).populate("posts");
+  console.log(user) ;
   res.render("profile", { user });
 });
+router.get("/show/posts", isLoggedIn, async function (req, res, next) {
+  let user = await userModel.findOne({ username: req.session.passport.user }).populate("posts");
+  res.render("show", { user });
+});
+router.get("/add", isLoggedIn, async function (req, res, next) {
+  let user = await userModel.findOne({ username: req.session.passport.user });
+  res.render("add", { user });
+});
 router.get("/register", function (req, res, next) {
-  res.render("register",{ error: req.flash("error") });
+  res.render("register", { error: req.flash("error") });
 });
-router.get("/feed", isLoggedIn, function (req, res, next) {
-  res.render("feed");
+router.get("/feed", isLoggedIn, async function (req, res, next) {
+  let user = await userModel.findOne({ username: req.session.passport.user }).populate("posts");
+  const posts = await postModel.find().populate("user") ;
+  res.render("feed", { user,posts});
 });
+router.post(
+  "/createpost",
+  isLoggedIn,
+  upload.single("postimage"),
+  async function (req, res, next) {
+    let user = await userModel.findOne({ username: req.session.passport.user });
+  let post = await postModel.create({
+      user: user._id,
+      title: req.body.title,
+      caption: req.body.caption,
+      image: req.file.filename,
+    });
+     user.posts.push(post._id) ;
+     await user.save() ;
+     res.redirect("/profile") ;
+  }
+);
 router.post("/register", function (req, res) {
   const { username, email, fullname } = req.body;
   const userdata = new userModel({ username, email, fullname });
@@ -49,9 +77,9 @@ router.get("/logout", function (req, res, next) {
   });
 });
 router.post(
-  "/upload",
+  "/fileupload",
   isLoggedIn,
-  upload.single("file"),
+  upload.single("image"),
   async function (req, res, next) {
     if (!req.file) {
       return res.status(404).send("No files were uploaded.");
@@ -59,14 +87,15 @@ router.post(
     const user = await userModel.findOne({
       username: req.session.passport.user,
     });
-    const post = await postModel.create({
-      image: req.file.filename,
-      imageText: req.body.filecaption,
-      user: user._id,
-    });
-    user.posts.push(post._id);
+    user.profileImage = req.file.filename;
     await user.save();
-    res.redirect("/profile") ;
+    res.redirect("/profile");
+    // const post = await postModel.create({
+    //   image: req.file.filename,
+    //   imageText: req.body.filecaption,
+    //   user: user._id,
+    // });
+    // user.posts.push(post._id);
   }
 );
 function isLoggedIn(req, res, next) {

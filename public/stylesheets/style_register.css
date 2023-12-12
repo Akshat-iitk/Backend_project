@@ -54,6 +54,7 @@ h1 {
 }
 .overall{
   background: #ffffff url("https://images.unsplash.com/photo-1612690118163-5424fd0661fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8NDkwMjk2fHxlbnwwfHx8fHw%3D") center center/cover no-repeat;
+ 
 }
 h1::after {
   content: "|";

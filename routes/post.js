@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
-  imageText: {
+  title: {
     type: String,
     required: true,
   },
@@ -16,9 +16,9 @@ const postSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  likes: {
-    type: Array,
-    default: [],
+  caption: {
+    type: String,
+    default:"",
   },
 });
-module.exports = mongoose.model("Post", postSchema);
+module.exports = mongoose.model("post", postSchema);

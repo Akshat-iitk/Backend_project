@@ -1,6 +1,9 @@
 function showPassword() {
     const passwordInput = document.getElementById('password');
     passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+    var eyes = document.querySelector("#eyespan") ;
+    if(eyes.className==="ri-eye-line") eyes.className="ri-eye-off-line" 
+    else eyes.className="ri-eye-line" 
 }
 function checkShowPassword() {
     const passwordInput = document.getElementById('password');
@@ -9,6 +12,8 @@ function checkShowPassword() {
       if (showPasswordCheckbox.checked) {
         showPasswordCheckbox.checked = false;
       }
+    var eyes = document.querySelector("#eyespan") ;
+    if(eyes.className==="ri-eye-line") eyes.className="ri-eye-off-line"
   }
   function removecheck(){
     const showPasswordCheckbox = document.getElementById('show_Password');

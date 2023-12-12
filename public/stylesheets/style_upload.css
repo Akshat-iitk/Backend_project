@@ -1,0 +1,8 @@
+#cardimg {
+    transition: border 0.3s ease-in-out;
+    border: 2px solid transparent;
+  }
+  
+#cardimg:hover{
+    border-color: #3498db; /* Add your desired highlight color */
+  }
