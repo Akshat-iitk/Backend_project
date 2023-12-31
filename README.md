@@ -79,6 +79,6 @@ nodemon run
 
 ## Screenshots
 
-![Website Screenshot](website_photos/Screenshot (110))
+![Website Screenshot](website_photo/Screenshot (110))
 
 Caption: Add a brief caption describing the screenshot.
