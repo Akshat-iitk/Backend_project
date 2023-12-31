@@ -4,9 +4,9 @@
 
 1. [Introduction](#introduction)
 2. [Features](#features)
-3. [Installation](#installation)
-4. [Overview](#overview)
-5. [Technologies Used](#technologies-used)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Overview](#overview)
 
 ## Introduction
 
@@ -22,7 +22,22 @@ Welcome to CaptionCraze, A full-stack web application built with Node.js, Expres
 
 - **Commenting:** Engage with other users by leaving comments on their posts.
 - ....
+- 
+## Technologies Used
 
+- **Backend:**
+  - [Node.js](https://nodejs.org/): JavaScript runtime for server-side development.
+  - [Express](https://expressjs.com/): Web framework for building APIs and web applications.
+  - [MongoDB](https://www.mongodb.com/): NoSQL database for data storage.
+  - [Mongoose](https://mongoosejs.com/): MongoDB object modeling for Node.js.
+  - [Passport](https://www.npmjs.com/package/passport): Passport is Express-compatible authentication middleware for Node.js.
+- **Frontend:**
+  - [EJS](https://ejs.co/): Embedded JavaScript templating for dynamic content.
+  - [Tailwind](https://tailwindcss.com/): A utility-first CSS framework that can be composed to build any design, directly in your markup.
+  - [Bootstap](https://getbootstrap.com/): Powerful, extensible, and feature-packed frontend toolkit
+  - CSS: Cascading Style Sheets for styling the frontend.
+  - JavaScript: A programming language for dynamic frontend elements.
+  - 
 ## Installation
 
 To get started with CarrerCraft, follow these steps:
@@ -63,17 +78,4 @@ nodemon run
 
 - **`README.md`:** Documentation file providing information about the project.
 
-## Technologies Used
 
-- **Backend:**
-  - [Node.js](https://nodejs.org/): JavaScript runtime for server-side development.
-  - [Express](https://expressjs.com/): Web framework for building APIs and web applications.
-  - [MongoDB](https://www.mongodb.com/): NoSQL database for data storage.
-  - [Mongoose](https://mongoosejs.com/): MongoDB object modeling for Node.js.
-  - [Passport](https://www.npmjs.com/package/passport): Passport is Express-compatible authentication middleware for Node.js.
-- **Frontend:**
-  - [EJS](https://ejs.co/): Embedded JavaScript templating for dynamic content.
-  - [Tailwind](https://tailwindcss.com/): A utility-first CSS framework that can be composed to build any design, directly in your markup.
-  - [Bootstap](https://getbootstrap.com/): Powerful, extensible, and feature-packed frontend toolkit
-  - CSS: Cascading Style Sheets for styling the frontend.
-  - JavaScript: A programming language for dynamic frontend elements.
