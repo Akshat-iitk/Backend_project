@@ -77,4 +77,8 @@ nodemon run
 
 - **`README.md`:** Documentation file providing information about the project.
 
+## Screenshots
 
+![Website Screenshot](website_photos/Screenshot (110))
+
+Caption: Add a brief caption describing the screenshot.
