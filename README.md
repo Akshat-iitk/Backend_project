@@ -7,7 +7,7 @@
 3. [Technologies Used](#technologies-used)
 4. [Installation](#installation)
 5. [Overview](#overview)
-5. [Website view](#screenshpts)
+5. [Website view](#screenshots)
 
 ## Introduction
 
