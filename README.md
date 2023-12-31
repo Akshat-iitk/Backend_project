@@ -7,6 +7,7 @@
 3. [Technologies Used](#technologies-used)
 4. [Installation](#installation)
 5. [Overview](#overview)
+5. [Website view](#screenshpts)
 
 ## Introduction
 
@@ -78,8 +79,27 @@ nodemon run
 - **`README.md`:** Documentation file providing information about the project.
 
 ## Screenshots
-![Screenshot (110)](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/f593a082-0879-4f98-91e4-3c69c656369e)
+### Login Page
 
-![Website Screenshot]((website_photo/Screenshot (110).png))
+![Login Page](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/f593a082-0879-4f98-91e4-3c69c656369e)
 
-Caption: Add a brief caption describing the screenshot.
+Access your account seamlessly with our intuitive and secure responsive login page.
+
+### SignUp Page
+
+![SignUp Page](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/dbd7e8f9-331d-4914-a241-fd7934103fa6)
+
+Join us and create your account with the same level of intuitiveness and security on our responsive SignUp page.
+### Profile page
+![Screenshot (112)](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/ace0cc3b-be99-4d7c-95aa-789bfbd0f407)
+Profile Page where you can see your post and edit profile pic is implemented using Multer
+### Feed page
+![Screenshot (113)](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/81018573-3746-42f5-8607-f5fe06321577)
+
+View other's posts with captions along with their username
+### Upload post page
+![Screenshot (114)](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/fb12bffe-6178-4cd9-be46-0b6d52845c0b)
+
+This is upload post page
+
+
