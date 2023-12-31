@@ -44,7 +44,7 @@ To get started with CarrerCraft, follow these steps:
 
 ```bash
 git clone https://github.com/Akshat-iitk/Caption-Craze.git
-cd your-project
+cd Caption-Craze
 npm install
 nodemon run
 ```
