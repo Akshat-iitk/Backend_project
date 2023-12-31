@@ -22,7 +22,6 @@ Welcome to CaptionCraze, A full-stack web application built with Node.js, Expres
 
 - **Commenting:** Engage with other users by leaving comments on their posts.
 - ....
-- 
 ## Technologies Used
 
 - **Backend:**
