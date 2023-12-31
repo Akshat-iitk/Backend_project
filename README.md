@@ -78,7 +78,8 @@ nodemon run
 - **`README.md`:** Documentation file providing information about the project.
 
 ## Screenshots
+![Screenshot (110)](https://github.com/Akshat-iitk/Caption-Craze/assets/96899544/f593a082-0879-4f98-91e4-3c69c656369e)
 
-![Website Screenshot](website_photo/Screenshot (110))
+![Website Screenshot]((website_photo/Screenshot (110).png))
 
 Caption: Add a brief caption describing the screenshot.
