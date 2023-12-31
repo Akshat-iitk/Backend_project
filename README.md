@@ -37,7 +37,7 @@ Welcome to CaptionCraze, A full-stack web application built with Node.js, Expres
   - [Bootstap](https://getbootstrap.com/): Powerful, extensible, and feature-packed frontend toolkit
   - CSS: Cascading Style Sheets for styling the frontend.
   - JavaScript: A programming language for dynamic frontend elements.
-  - 
+  - ... (Include other libraries for icons, animations, etc.)
 ## Installation
 
 To get started with CarrerCraft, follow these steps:
